@@ -1,5 +1,5 @@
 <?php
-require_once "../api/Model/Database.php";
+require_once "/eventmanager/Server/api/Model/Database.php";
 
 class LoginModel extends Database {
     public function getApplication($user) {

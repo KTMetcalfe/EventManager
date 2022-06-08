@@ -8,30 +8,13 @@
 import SwiftUI
 
 struct MainView: View {
-    @AppStorage("isLoggedIn") private var isLoggedIn = true
+    @State @AppStorage("username") private var username = ""
+    @State @AppStorage("password") private var password = ""
+    @State @AppStorage("location") private var location = ""
+    @State @AppStorage("location_name") private var location_name = ""
+    @AppStorage("isLoggedIn") private var isLoggedIn = false
     
     @State private var outJson: [Item] = [Item].init()
-    
-//    func getItems() {
-//        let url = URL(string: "https://api.kianm.net/index.php/vehicles/list")!
-//
-//        let task = URLSession.shared.dataTask(with: url) {
-//            data, response, error in
-//            guard
-//                error == nil,
-//                let data = data,
-//                let string = String(data: data, encoding: .utf8)
-//            else {
-//                print(error ?? "Unknown error")
-//                return
-//            }
-//
-//            print(string)
-//
-//            decode(outData: data)
-//        }
-//        task.resume()
-//    }
     
     struct Item: Codable {
         var id: Int
@@ -39,10 +22,39 @@ struct MainView: View {
         var price: Int
         var imageUrl: String
         var multipliers: String
+        var locations: String
     }
     
     func decode(outData: Data) {
         outJson = try! JSONDecoder().decode([Item].self, from: outData)
+    }
+    
+    func getItems() {
+        print(username + ":" + password)
+        let url = URL(string: "https://em.kianm.net/index.php/item/list")!
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("Basic " + (username + ":" + password).toBase64(), forHTTPHeaderField: "Authorization")
+        request.httpBody = String(format: "{\"location\": \"%@\"}", location).data(using: .utf8)
+        
+        let task = URLSession.shared.dataTask(with: request) {
+            data, response, error in
+            guard
+                error == nil,
+                let data = data,
+                let string = String(data: data, encoding: .utf8)
+            else {
+                print(error ?? "Unknown error")
+                return
+            }
+
+            print(string)
+            decode(outData: data)
+        }
+        task.resume()
     }
     
     var body: some View {
@@ -50,12 +62,15 @@ struct MainView: View {
             Button("Sign out") {
                 isLoggedIn = false
             }
-            List(outJson, id: \.id) { item in
-                Button(item.name + " " + String(item.price)) {
+            VStack {
+                Text(location_name)
+                List(outJson, id: \.id) { item in
+                    Button(item.name + " " + String(item.price)) {
+                    }
                 }
+                .onAppear {
+                    getItems()
             }
-            .onAppear {
-                decode(outData: "[{\"id\": 0,\"name\": \"Brat\",\"price\": 400,\"imageUrl\":\"https://bratfest.kianm.net/api/images/brat\",\"multipliers\": \"[5, 10, 20, 50]\"},{\"id\": 1,\"name\": \"Chicken Brat\",\"price\": 400,\"imageUrl\": \"https://bratfest.kianm.net/api/images/chicken_brat\",\"multipliers\": \"[5, 10, 20, 50]\"},{\"id\": 2,\"name\": \"Veggie Brat\",\"price\": 400,\"imageUrl\":\"https://bratfest.kianm.net/api/images/veggie_brat\",\"multipliers\":\"[5, 10, 20, 50]\"},{\"id\": 3,\"name\":\"Hotdog\",\"price\":400,\"imageUrl\":\"https://bratfest.kianm.net/api/images/hotdog\",\"multipliers\":\" [5, 10, 20, 50]\"},{\"id\":4,\"name\":\"Beverage\",\"price\":400,\"imageUrl\":\"https://bratfest.kianm.net/api/images/beverage\",\"multipliers\": \"[]\"}]".data(using: .utf8)!)
             }
         }
     }
