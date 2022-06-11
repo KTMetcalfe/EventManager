@@ -1,0 +1,16 @@
+[
+    {
+        "id": 0,
+        "name": "Corn",
+        "price": 300,
+        "imageUrl": "https://bratfest.kianm.net/api/images/corn",
+        "multipliers": [5, 10, 20, 50]
+    },
+    {
+        "id": 1,
+        "name": "Beverage",
+        "price": 400,
+        "imageUrl": "https://bratfest.kianm.net/api/images/beverage",
+        "multipliers": []
+    }
+]

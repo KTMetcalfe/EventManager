@@ -7,7 +7,19 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct Item: Codable {
+    let id: Int
+    let name: String
+    let price: Int
+    let multipliers: String
+    let locations: String
+}
+
+extension Item: Identifiable {
+    var ID: Int { return id }
+}
+
+struct LocationView: View {
     @State @AppStorage("username") private var username = ""
     @State @AppStorage("password") private var password = ""
     @State @AppStorage("location") private var location = ""
@@ -15,15 +27,6 @@ struct MainView: View {
     @AppStorage("isLoggedIn") private var isLoggedIn = false
     
     @State private var outJson: [Item] = [Item].init()
-    
-    struct Item: Codable {
-        var id: Int
-        var name: String
-        var price: Int
-        var imageUrl: String
-        var multipliers: String
-        var locations: String
-    }
     
     func decode(outData: Data) {
         outJson = try! JSONDecoder().decode([Item].self, from: outData)
@@ -64,20 +67,21 @@ struct MainView: View {
             }
             VStack {
                 Text(location_name)
-                List(outJson, id: \.id) { item in
-                    Button(item.name + " " + String(item.price)) {
-                    }
+                if #available(iOS 16.0, *) {
+                    GridView().onAppear { getItems() }
+                } else {
+                    // Fallback on earlier versions
+                    List(outJson, id: \.id) { item in
+                        Button(item.name + " " + String(item.price)) {}
+                    }.onAppear { getItems() }
                 }
-                .onAppear {
-                    getItems()
-            }
             }
         }
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        LocationView()
     }
 }

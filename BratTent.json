@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "Brat",
+        "price": 400,
+        "imageUrl": "https://bratfest.kianm.net/api/images/brat",
+        "multipliers": [5, 10, 20, 50]
+        "location": "Brat Tent"
+    },
+    {
+        "id": 1,
+        "name": "Chicken Brat",
+        "price": 400,
+        "imageUrl": "https://bratfest.kianm.net/api/images/chicken_brat",
+        "multipliers": [5, 10, 20, 50]
+    },
+    {
+        "id": 2,
+        "name": "Veggie Brat",
+        "price": 400,
+        "imageUrl": "https://bratfest.kianm.net/api/images/veggie_brat",
+        "multipliers": [5, 10, 20, 50]
+    },
+    {
+        "id": 3,
+        "name": "Hotdog",
+        "price": 400,
+        "imageUrl": "https://bratfest.kianm.net/api/images/hotdog",
+        "multipliers": [5, 10, 20, 50]
+    },
+    {
+        "id": 4,
+        "name": "Beverage",
+        "price": 400,
+        "imageUrl": "https://bratfest.kianm.net/api/images/beverage",
+        "multipliers": []
+    }
+]
