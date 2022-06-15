@@ -11,7 +11,7 @@ struct ContentView: View {
     @AppStorage("isLoggedIn") private var isLoggedIn = false
     
     var body: some View {
-        if (!isLoggedIn) {
+        if (!isLoggedIn && false) {
             LoginView()
         } else {
             LocationView()
