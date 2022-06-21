@@ -16,11 +16,14 @@ struct LocationView: View {
     
     @State private var outJson: [Item] = [Item].init()
     
+    @State private var spinDeg = 0.0
+    
+    @State var isPreview: Bool = false
+    
     func getItems() {
-        #if DEBUG
+        #if false
             outJson = Helper.load(name: "BratTent")
         #else
-            print(username + ":" + password)
             let url = URL(string: "https://em.kianm.net/index.php/item/list")!
 
             var request = URLRequest(url: url)
@@ -43,6 +46,7 @@ struct LocationView: View {
 
                 print(string)
                 outJson = Helper.decode(outData: data)
+                print(String(outJson.count))
             }
             task.resume()
         #endif
@@ -50,18 +54,28 @@ struct LocationView: View {
     
     var body: some View {
         VStack {
-            Button("Sign out") {
-                isLoggedIn = false
-            }
-            VStack {
-                Text(location_name)
-                if #available(iOS 16.0, *) {
-                    GridView(outJson: $outJson)
-                } else {
-                    // Fallback on earlier versions
-                    List(outJson) { item in
-                        Button(item.name + " " + String(item.price)) {}
+            HStack {
+                VStack {
+                    Button("Sign out") {
+                        isLoggedIn = false
                     }
+                    Text(location_name)
+                }
+                Button(action: {
+                    getItems()
+                    spinDeg += 360.0
+                }) {
+                    Image(systemName: "arrow.clockwise")
+                        .rotationEffect(.degrees(spinDeg))
+                }
+                .animation(.easeInOut, value: spinDeg)
+            }
+            if #available(iOS 16.0, *) {
+                GridView(outJson: !isPreview ? $outJson : .constant(Helper.load(name: "BratTent"))).environmentObject(CheckoutFunction())
+            } else {
+                // Fallback on earlier versions
+                List(outJson) { item in
+                    Button(item.name + " " + String(item.price)) {}
                 }
             }
         }.onAppear { getItems() }
@@ -70,6 +84,6 @@ struct LocationView: View {
 
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationView()
+        LocationView(isPreview: true)
     }
 }

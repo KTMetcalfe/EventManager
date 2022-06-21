@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E64B954D28624FCD00A20180 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B954C28624FCD00A20180 /* CheckoutView.swift */; };
 		E66F5CD02849025F005BFF29 /* EventManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66F5CCF2849025F005BFF29 /* EventManagerApp.swift */; };
 		E66F5CD22849025F005BFF29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66F5CD12849025F005BFF29 /* ContentView.swift */; };
 		E66F5CD428490261005BFF29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66F5CD328490261005BFF29 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E64B954C28624FCD00A20180 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		E66F5CCC2849025F005BFF29 /* EventManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66F5CCF2849025F005BFF29 /* EventManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManagerApp.swift; sourceTree = "<group>"; };
 		E66F5CD12849025F005BFF29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				E6F6EE822849BBB600D5B3A3 /* LocationView.swift */,
 				E6FCD8002851672900F671F4 /* GridView.swift */,
 				E6A68BD6285A39280087DE74 /* JSONHelper.swift */,
+				E64B954C28624FCD00A20180 /* CheckoutView.swift */,
 			);
 			path = EventManager;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				E6A68BD7285A39280087DE74 /* JSONHelper.swift in Sources */,
 				E6F6EE752849ACE100D5B3A3 /* LoginView.swift in Sources */,
 				E6F6EE832849BBB600D5B3A3 /* LocationView.swift in Sources */,
+				E64B954D28624FCD00A20180 /* CheckoutView.swift in Sources */,
 				E66F5CD22849025F005BFF29 /* ContentView.swift in Sources */,
 				E6FCD8012851672900F671F4 /* GridView.swift in Sources */,
 				E66F5CD02849025F005BFF29 /* EventManagerApp.swift in Sources */,

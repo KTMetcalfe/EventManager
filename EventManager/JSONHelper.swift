@@ -36,12 +36,16 @@ class Helper {
         return []
     }
     
-    static func decode<out: Codable> (outData: Data) -> [out] {
+    static func decode (outData: Data) -> [Item] {
         do {
-            let outJson = try JSONDecoder().decode([out].self, from: outData)
+            let outJson = try JSONDecoder().decode([Item].self, from: outData)
             return outJson
         } catch {
             return []
         }
+    }
+    
+    static func formatPrice (price: Int) -> String {
+        return ("$" + String(price / 100) + "." + ((price % 100 < 10 ? "0" : "") + String(price % 100)))
     }
 }

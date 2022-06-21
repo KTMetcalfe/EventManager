@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "name": "Brat",
         "price": 400,
         "multipliers": "[5, 10, 20, 50]",
@@ -9,7 +9,7 @@
         "posY": 1
     },
     {
-        "id": 1,
+        "id": 2,
         "name": "Chicken Brat",
         "price": 400,
         "multipliers": "[5, 10, 20, 50]",
@@ -18,7 +18,7 @@
         "posY": 2
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Veggie Brat",
         "price": 400,
         "multipliers": "[5, 10, 20, 50]",
@@ -27,7 +27,7 @@
         "posY": 3
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Hotdog",
         "price": 400,
         "multipliers": "[5, 10, 20, 50]",
@@ -36,7 +36,7 @@
         "posY": 2
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Beverage",
         "price": 400,
         "multipliers": "[]",

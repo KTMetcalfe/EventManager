@@ -12,7 +12,7 @@ struct EventManagerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            .background(Color(.systemGray3))
+            .background(Color(.systemBackground))
         }
     }
 }

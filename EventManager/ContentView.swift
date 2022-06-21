@@ -11,10 +11,19 @@ struct ContentView: View {
     @AppStorage("isLoggedIn") private var isLoggedIn = false
     
     var body: some View {
-        if (!isLoggedIn && false) {
+        if (!isLoggedIn) {
             LoginView()
         } else {
-            LocationView()
+            if #available(iOS 16.0, *) {
+                NavigationStack{
+                    LocationView()
+                }
+            } else {
+                // Fallback on earlier versions
+                NavigationView{
+                    LocationView()
+                }
+            }
         }
     }
 }
