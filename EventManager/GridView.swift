@@ -7,25 +7,33 @@
 
 import SwiftUI
 
-@available(iOS 16.0, *)
 struct GridView: View {
     @State private var showKeypad: Bool = false
     
     @Binding var outJson: [Item]
     
+    @EnvironmentObject var checkoutModel: CheckoutFunction
+    
     var body: some View {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            // List for iphone devices
-            VStack {
-                List(outJson) { item in
-                    Button(item.name + String(item.price)) {
+        GeometryReader { geometry in
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                // List for iphone devices
+                VStack(spacing: 0) {
+                    List(outJson) { item in
+                        Button(item.name + String(item.price)) {
+                            checkoutModel.addItem(id: item.id, name: item.name, price: item.price, amount: 1)
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
+                    // Checkout list
+                    CheckoutList()
+                        .frame(
+                            height: geometry.size.height * 0.5
+                        )
+                        .background(Color(.systemBackground))
                 }
-            }
-        } else {
-            // List for all non-iphones
-            GeometryReader { geometry in
+            } else {
+                // List for all non-iphones
                 VStack(alignment: .leading, spacing: 0) {
                     // Main stack
                     HStack(spacing: 0) {
@@ -33,29 +41,31 @@ struct GridView: View {
                         ZStack {
                             ItemGrid(itemList: $outJson, geometry: geometry)
                             if showKeypad {
-                                Keypad(geometry: geometry)
+                                if #available(iOS 16.0, *) {
+                                    Keypad(geometry: geometry)
+                                }
                             }
                         }
                         // Checkout list
                         CheckoutList()
-                        .frame(
-                            width: geometry.size.width * 0.25
-                        )
-                        .background(Color(.secondarySystemBackground))
+                            .frame(
+                                width: geometry.size.width * 0.25
+                            )
+                            .background(Color(.secondarySystemBackground))
                     }
                     // Navigation stack
                     HStack {
                         Button(action: {
                             showKeypad = false
                         }) {
-                           Text("Checkout")
+                            Text("Checkout")
                                 .padding()
                         }
                         .buttonStyle(.plain)
                         Button(action: {
                             showKeypad = true
                         }) {
-                           Text("Keypad")
+                            Text("Keypad")
                                 .padding()
                         }
                         .buttonStyle(.plain)
@@ -65,54 +75,7 @@ struct GridView: View {
                     )
                     .background(Color(.systemGray2))
                 }
-            }
-            .font(.system(size: 22))
-        }
-    }
-}
-
-struct CheckoutItem: Codable {
-    let id: Int
-    let name: String
-    var price: Int
-    var count: Int
-}
-
-extension CheckoutItem: Identifiable {
-    var ID: Int { return id }
-}
-
-class CheckoutFunction: ObservableObject {
-    @Published var checkoutList = [CheckoutItem]()
-    
-    func addItem(id: Int, name: String, price: Int, amount: Int) {
-        if (checkoutList.contains(where: {$0.id == id})) {
-            let index = checkoutList.firstIndex(where: {$0.id == id})
-            checkoutList[index!].price += price;
-            checkoutList[index!].count += amount;
-        } else {
-            checkoutList.append(CheckoutItem.init(id: id, name: name, price: price, count: amount))
-        }
-    }
-}
-
-struct CheckoutList: View {
-    @EnvironmentObject var checkoutModel: CheckoutFunction
-    
-    var body: some View {
-        if (checkoutModel.checkoutList.isEmpty) {
-            Color(.secondarySystemBackground)
-        } else {
-            VStack(spacing: 0) {
-                List(checkoutModel.checkoutList) { item in
-                    HStack {
-                        Text(item.name + " x" + String(item.count))
-                        Text(Helper.formatPrice(price: item.price))
-                    }
-                }
-                NavigationLink("Checkout") {
-                    CheckoutView().environmentObject(checkoutModel)
-                }.padding()
+                .font(.system(size: 22))
             }
         }
     }
@@ -191,10 +154,73 @@ struct BackgroundGrid: View {
     }
 }
 
+struct CheckoutList: View {
+    @EnvironmentObject var checkoutModel: CheckoutFunction
+    @EnvironmentObject var checkoutObserver: CheckoutObserver
+    
+    func getPrice() -> Int {
+        var cost = 0
+        checkoutModel.checkoutList.forEach { item in
+            cost += item.price
+        }
+        return cost;
+    }
+    
+    var body: some View {
+        ZStack {
+            CheckoutView().environmentObject(checkoutObserver)
+                .frame(width: 0, height: 0)
+            if (checkoutModel.checkoutList.isEmpty) {
+                Color(.systemBackground)
+            } else {
+                VStack(spacing: 0) {
+                    List(checkoutModel.checkoutList) { item in
+                        HStack {
+                            Text(item.name)
+                            Text("x" + String(item.count))
+                            Text(JSONHelper.formatPrice(price: item.price))
+                        }
+                    }
+                    .cornerRadius(25)
+                    .padding()
+                    Button("Checkout") {
+                        checkoutObserver.checkoutPrice = getPrice()
+                    }.padding()
+                }.background(Color(.secondarySystemBackground))
+            }
+        }
+    }
+}
+
+struct CheckoutItem: Codable {
+    let id: Int
+    let name: String
+    var price: Int
+    var count: Int
+}
+
+extension CheckoutItem: Identifiable {
+    var ID: Int { return id }
+}
+
+class CheckoutFunction: ObservableObject {
+    @Published var checkoutList = [CheckoutItem]()
+    
+    func addItem(id: Int, name: String, price: Int, amount: Int) {
+        if (checkoutList.contains(where: {$0.id == id})) {
+            let index = checkoutList.firstIndex(where: {$0.id == id})
+            checkoutList[index!].price += price;
+            checkoutList[index!].count += amount;
+        } else {
+            checkoutList.append(CheckoutItem.init(id: id, name: name, price: price, count: amount))
+        }
+    }
+}
+
 @available(iOS 16.0, *)
 struct Keypad: View {
     let geometry: GeometryProxy
-    
+
     var body: some View {
         Color(.systemGray3).overlay(content: {
             Grid(horizontalSpacing: 25, verticalSpacing: 25) {
@@ -220,7 +246,6 @@ struct Keypad: View {
             }
         })
     }
-    
 }
 
 struct ScaleButtonStyle: ButtonStyle {
@@ -231,10 +256,9 @@ struct ScaleButtonStyle: ButtonStyle {
     }
 }
 
-@available(iOS 16.0, *)
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
-        GridView(outJson: .constant(Helper.load(name: "BratTent")))
+        GridView(outJson: .constant(JSONHelper.load(name: "BratTent")))
             .environmentObject(CheckoutFunction())
     }
 }

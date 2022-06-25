@@ -1,0 +1,7 @@
+// Copyright(C) 2021 Square, Inc. All Rights Reserved.
+
+// New events should always be added to the end of the file
+
+CRS_EVENTLOG_EVENT_DEF(CRS_EVENT_L2_TAG_INDEXING_ENABLED)
+
+// add your event before this line!

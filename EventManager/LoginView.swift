@@ -34,7 +34,8 @@ struct LoginView: View {
     @AppStorage("isLoggedIn") private var isLoggedIn = false
     
     struct Login: Codable {
-        var verified: Bool?
+        var verified: Bool? = false
+        var token: String?
         var location_name: String?
         var error: String?
     }
@@ -73,6 +74,7 @@ struct LoginView: View {
                 defaults.set(location, forKey: "location")
                 defaults.set(decode(outData: data).location_name, forKey: "location_name")
                 defaults.set(true, forKey: "isLoggedIn")
+                defaults.set(decode(outData: data).token, forKey: "access_token")
             }
         }
         task.resume()

@@ -20,9 +20,13 @@ struct LocationView: View {
     
     @State var isPreview: Bool = false
     
+    @EnvironmentObject var checkoutModel: CheckoutFunction
+    @EnvironmentObject var checkoutObserver: CheckoutObserver
+    @EnvironmentObject var readerObserver: ReaderObserver
+    
     func getItems() {
         #if false
-            outJson = Helper.load(name: "BratTent")
+            outJson = JSONHelper.load(name: "BratTent")
         #else
             let url = URL(string: "https://em.kianm.net/index.php/item/list")!
 
@@ -45,7 +49,7 @@ struct LocationView: View {
                 }
 
                 print(string)
-                outJson = Helper.decode(outData: data)
+                outJson = JSONHelper.decode(outData: data)
                 print(String(outJson.count))
             }
             task.resume()
@@ -55,13 +59,22 @@ struct LocationView: View {
     var body: some View {
         VStack {
             HStack {
+                Button(action: {
+                    readerObserver.showReader = true
+                }) {
+                    Image(systemName: "gearshape")
+                }
                 VStack {
                     Button("Sign out") {
+                        checkoutObserver.checkoutPrice = 0
+                        readerObserver.showReader = false
                         isLoggedIn = false
                     }
                     Text(location_name)
                 }
                 Button(action: {
+                    checkoutModel.checkoutList = []
+                    checkoutObserver.checkoutPrice = 0
                     getItems()
                     spinDeg += 360.0
                 }) {
@@ -70,14 +83,8 @@ struct LocationView: View {
                 }
                 .animation(.easeInOut, value: spinDeg)
             }
-            if #available(iOS 16.0, *) {
-                GridView(outJson: !isPreview ? $outJson : .constant(Helper.load(name: "BratTent"))).environmentObject(CheckoutFunction())
-            } else {
-                // Fallback on earlier versions
-                List(outJson) { item in
-                    Button(item.name + " " + String(item.price)) {}
-                }
-            }
+            ReaderView().environmentObject(readerObserver).frame(width: 0, height: 0)
+            GridView(outJson: !isPreview ? $outJson : .constant(JSONHelper.load(name: "BratTent"))).environmentObject(checkoutModel).environmentObject(checkoutObserver)
         }.onAppear { getItems() }
     }
 }

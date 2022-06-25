@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		E64B954D28624FCD00A20180 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B954C28624FCD00A20180 /* CheckoutView.swift */; };
+		E64B955B286380A000A20180 /* SquareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B955A286380A000A20180 /* SquareHelper.swift */; };
+		E64B955D2863A42100A20180 /* AuthorizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B955C2863A42100A20180 /* AuthorizeView.swift */; };
+		E64B95602863AF9500A20180 /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = E64B955F2863AF9500A20180 /* BetterSafariView */; };
+		E64B956528661E5900A20180 /* SquareReaderSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B956428661E5900A20180 /* SquareReaderSDK.xcframework */; };
+		E64B956628661E5900A20180 /* SquareReaderSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E64B956428661E5900A20180 /* SquareReaderSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E66F5CD02849025F005BFF29 /* EventManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66F5CCF2849025F005BFF29 /* EventManagerApp.swift */; };
 		E66F5CD22849025F005BFF29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66F5CD12849025F005BFF29 /* ContentView.swift */; };
 		E66F5CD428490261005BFF29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66F5CD328490261005BFF29 /* Assets.xcassets */; };
 		E66F5CD728490261005BFF29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66F5CD628490261005BFF29 /* Preview Assets.xcassets */; };
+		E6A5527528665F01001AABFE /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5527428665F01001AABFE /* ReaderView.swift */; };
 		E6A68BD7285A39280087DE74 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A68BD6285A39280087DE74 /* JSONHelper.swift */; };
 		E6F6EE752849ACE100D5B3A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6EE742849ACE100D5B3A3 /* LoginView.swift */; };
 		E6F6EE832849BBB600D5B3A3 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6EE822849BBB600D5B3A3 /* LocationView.swift */; };
@@ -21,13 +27,31 @@
 		E6FCD8012851672900F671F4 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FCD8002851672900F671F4 /* GridView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E64B9554286261E700A20180 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E64B956628661E5900A20180 /* SquareReaderSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E64B954C28624FCD00A20180 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		E64B955A286380A000A20180 /* SquareHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareHelper.swift; sourceTree = "<group>"; };
+		E64B955C2863A42100A20180 /* AuthorizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeView.swift; sourceTree = "<group>"; };
+		E64B956428661E5900A20180 /* SquareReaderSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SquareReaderSDK.xcframework; sourceTree = "<group>"; };
 		E66F5CCC2849025F005BFF29 /* EventManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66F5CCF2849025F005BFF29 /* EventManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManagerApp.swift; sourceTree = "<group>"; };
 		E66F5CD12849025F005BFF29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E66F5CD328490261005BFF29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E66F5CD628490261005BFF29 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6A5527428665F01001AABFE /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		E6A68BD6285A39280087DE74 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		E6F6EE742849ACE100D5B3A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E6F6EE762849AF4A00D5B3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -43,17 +67,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64B956528661E5900A20180 /* SquareReaderSDK.xcframework in Frameworks */,
+				E64B95602863AF9500A20180 /* BetterSafariView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E64B9550286261E700A20180 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E64B956428661E5900A20180 /* SquareReaderSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E66F5CC32849025F005BFF29 = {
 			isa = PBXGroup;
 			children = (
 				E66F5CCE2849025F005BFF29 /* EventManager */,
 				E66F5CCD2849025F005BFF29 /* Products */,
+				E64B9550286261E700A20180 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +116,9 @@
 				E6FCD8002851672900F671F4 /* GridView.swift */,
 				E6A68BD6285A39280087DE74 /* JSONHelper.swift */,
 				E64B954C28624FCD00A20180 /* CheckoutView.swift */,
+				E64B955A286380A000A20180 /* SquareHelper.swift */,
+				E64B955C2863A42100A20180 /* AuthorizeView.swift */,
+				E6A5527428665F01001AABFE /* ReaderView.swift */,
 			);
 			path = EventManager;
 			sourceTree = "<group>";
@@ -103,12 +141,17 @@
 				E66F5CC82849025F005BFF29 /* Sources */,
 				E66F5CC92849025F005BFF29 /* Frameworks */,
 				E66F5CCA2849025F005BFF29 /* Resources */,
+				E64B9554286261E700A20180 /* Embed Frameworks */,
+				E64B95552862621400A20180 /* Run Script */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = EventManager;
+			packageProductDependencies = (
+				E64B955F2863AF9500A20180 /* BetterSafariView */,
+			);
 			productName = EventManager;
 			productReference = E66F5CCC2849025F005BFF29 /* EventManager.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +181,9 @@
 				Base,
 			);
 			mainGroup = E66F5CC32849025F005BFF29;
+			packageReferences = (
+				E64B955E2863AF9500A20180 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+			);
 			productRefGroup = E66F5CCD2849025F005BFF29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,17 +208,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E64B95552862621400A20180 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORKS=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\"${FRAMEWORKS}/SquareReaderSDK.framework/setup\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E66F5CC82849025F005BFF29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E6A68BD7285A39280087DE74 /* JSONHelper.swift in Sources */,
+				E6A5527528665F01001AABFE /* ReaderView.swift in Sources */,
 				E6F6EE752849ACE100D5B3A3 /* LoginView.swift in Sources */,
 				E6F6EE832849BBB600D5B3A3 /* LocationView.swift in Sources */,
 				E64B954D28624FCD00A20180 /* CheckoutView.swift in Sources */,
+				E64B955D2863A42100A20180 /* AuthorizeView.swift in Sources */,
 				E66F5CD22849025F005BFF29 /* ContentView.swift in Sources */,
 				E6FCD8012851672900F671F4 /* GridView.swift in Sources */,
+				E64B955B286380A000A20180 /* SquareHelper.swift in Sources */,
 				E66F5CD02849025F005BFF29 /* EventManagerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +384,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,7 +423,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,6 +463,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E64B955E2863AF9500A20180 /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E64B955F2863AF9500A20180 /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E64B955E2863AF9500A20180 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E66F5CC42849025F005BFF29 /* Project object */;
 }

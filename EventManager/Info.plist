@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This application integrates with Square for card processing. Square uses Bluetooth to connect your device to compatible hardware.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This application integrates with Square for card processing. Upload your account logo, feature photo, and product images with the photos stored on your mobile device.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This application integrates with Square for card processing. Upload your account logo, feature photo, and product images with the photos stored on your mobile device.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This application integrates with Square for card processing. Square uses Bluetooth to connect your device to compatible hardware.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This application integrates with Square for card processing. To swipe magnetic cards using the headphone jack, Square requires access to the microphone.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application integrates with Square for card processing. To protect buyers and sellers, Square requires your location to process payments.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

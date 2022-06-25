@@ -21,7 +21,7 @@ extension Item: Identifiable {
     var ID: Int { return id }
 }
 
-class Helper {
+class JSONHelper {
     static func load (name: String) -> [Item] {
         if let path = Bundle.main.path(forResource: name, ofType: "json") {
             do {

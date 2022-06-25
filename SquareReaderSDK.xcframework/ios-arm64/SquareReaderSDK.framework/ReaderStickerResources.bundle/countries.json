@@ -1,0 +1,10 @@
+{
+    "au" : [ "visa", "mastercard", "amex", "applepay", "googlepay" ],
+    "ca" : [ "visa", "mastercard", "amex", "applepay", "interac" ],
+    "fr" : [ "visa", "visapay", "mastercard", "maestro", "amex", "applepay", "googlepay" ],
+    "ie" : [ "mastercard", "visa",  "amex", "applepay", "googlepay", "contactless" ],
+    "gb" : [ "visa", "mastercard", "amex", "applepay", "googlepay" ],
+    "ie" : [ "mastercard", "visa",  "amex", "applepay", "googlepay", "contactless" ],
+    "jp" : [ "visa", "mastercard", "amex" ],
+    "us" : [ "applepay", "googlepay", "visa", "mastercard", "amex", "discover" ]
+}

@@ -1,0 +1,408 @@
+BCSymbolMap Version: 2.0
+Apple clang version 12.0.0 (clang-1200.0.32.21)
+/Applications/Xcode/12.1.0/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk
+iPhoneSimulator14.1.sdk
+/Users/build/Library/Developer/Xcode/DerivedData/Pods-dtrppvivigatxaektcsxydpyliip/ArchiveIntermediates/CorePaymentCard/IntermediateBuildFilesPath/Pods.build/Release-iphonesimulator/CorePaymentCard.build/DerivedSources/CorePaymentCard_vers.c
+/Users/build/.jenkins/workspace/CI+ios+DLQ8PR+CI/ios-builder/scratch/podbin/CorePaymentCard/files/CorePaymentCard/4.11.0/sandbox/ios/Pods
+/Users/build/.jenkins/workspace/CI+ios+DLQ8PR+CI/ios-builder/s/i/Sources/Internal/CPCCardBrandDetection.m
+cpc_payment_get_issuer_for_pan
+s/i/Sources/Internal/CPCCardBrandDetection.m
+/Users/build/.jenkins/workspace/CI+ios+DLQ8PR+CI/ios-builder
+___CPCCardNumberIsNumeric_block_invoke
+___CPCCardMaskedCardNumberWithLength_block_invoke
+___CPCCardNumberWithoutFormatting_block_invoke
+___CPCAlphanumericCardNumberWithoutFormatting_block_invoke
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_.60
+_OBJC_SELECTOR_REFERENCES_.66
+_OBJC_SELECTOR_REFERENCES_.114
+_OBJC_SELECTOR_REFERENCES_.116
+_OBJC_SELECTOR_REFERENCES_.118
+_OBJC_SELECTOR_REFERENCES_.122
+_CPCCardNumberIsNumeric.onceToken
+_CPCCardNumberIsNumeric.nonNumericCharacterSet
+___block_descriptor_32_e5_v8?0l
+___block_literal_global
+_OBJC_CLASSLIST_REFERENCES_$_.124
+_OBJC_SELECTOR_REFERENCES_.128
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_CLASSLIST_REFERENCES_$_.131
+_OBJC_SELECTOR_REFERENCES_.133
+_OBJC_SELECTOR_REFERENCES_.137
+_OBJC_SELECTOR_REFERENCES_.139
+_OBJC_CLASSLIST_REFERENCES_$_.140
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_CLASSLIST_REFERENCES_$_.143
+_OBJC_SELECTOR_REFERENCES_.145
+_OBJC_SELECTOR_REFERENCES_.147
+_OBJC_SELECTOR_REFERENCES_.149
+_OBJC_SELECTOR_REFERENCES_.151
+_OBJC_SELECTOR_REFERENCES_.153
+_OBJC_SELECTOR_REFERENCES_.155
+_OBJC_SELECTOR_REFERENCES_.157
+_OBJC_SELECTOR_REFERENCES_.161
+_OBJC_SELECTOR_REFERENCES_.163
+_CPCCardMaskedCardNumberWithLength.onceToken
+_CPCCardMaskedCardNumberWithLength.numericCharacterSet
+___block_literal_global.164
+_OBJC_SELECTOR_REFERENCES_.166
+_OBJC_SELECTOR_REFERENCES_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_SELECTOR_REFERENCES_.174
+_CPCCardNumberWithoutFormatting.onceToken
+_CPCCardNumberWithoutFormatting.nonNumericCharacterSet
+___block_literal_global.175
+_CPCAlphanumericCardNumberWithoutFormatting.onceToken
+_CPCAlphanumericCardNumberWithoutFormatting.nonAlphanumericCharacterSet
+___block_literal_global.176
+_OBJC_SELECTOR_REFERENCES_.178
+_OBJC_CLASSLIST_REFERENCES_$_.179
+_OBJC_SELECTOR_REFERENCES_.181
+_OBJC_SELECTOR_REFERENCES_.183
+/Users/build/.jenkins/workspace/CI+ios+DLQ8PR+CI/ios-builder/s/i/Sources/CPCCardUtility.m
+__CPCAlphanumericCardNumberWithoutFormatting_block_invoke
+s/i/Sources/CPCCardUtility.m
+CPCAlphanumericCardNumberWithoutFormatting
+/Applications/Xcode/12.1.0/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/usr/include/dispatch/once.h
+CPCCardNumberWithoutCharactersInSet
+__CPCCardNumberWithoutFormatting_block_invoke
+CPCCardNumberWithoutFormatting
+CPCCardMaskedVerificationValueWithBrand
+CPCCardValidLengthForVerificationValueWithBrand
+CPCCardMaskedCardNumberWithBrandAndSuffix
+_CPCCardExpectedCardNumberLengthForBrand
+CPCCardMinimumValidLengthForCardNumberWithBrand
+__CPCCardMaskedCardNumberWithLength_block_invoke
+CPCCardMaskedCardNumberWithLength
+NSMakeRange
+/Applications/Xcode/12.1.0/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+CPCCardMaskedCardNumber
+CPCCardFormattedMaskedCardNumberWithBrand
+CPCCardSuffixWithCardNumber
+CPCCardFormattedCardNumberWithLength
+CPCCardFormattedCardNumber
+CPCCardFormattedGroupSizesWithLength
+_CPCCardExpectedLengthForCardNumber
+__CPCCardNumberIsNumeric_block_invoke
+CPCCardIsNonISORegisteredPrefix
+CPCCardNumberIsNumeric
+CPCCardBrandIsExemptFromLuhnCheck
+CPCStringIsValidLuhnChecksum
+CPCCardIsValidCardNumber
+CPCCardValidLengthForVerificationValueWithCardNumber
+CPCCardIsCardNumberValidLength
+NSLocationInRange
+CPCCardIsLengthValidForBrand
+CPCCardMaximumValidLengthForCardNumber
+NSMaxRange
+CPCCardMaximumValidLengthForCardNumberWithBrand
+CPCCardValidLengthRangeForCardNumber
+CPCCardMinimumValidLengthForCardNumber
+CPCCardValidLengthRangeForCardNumberWithBrand
+CPCCardVerificationValueSideWithBrand
+CPCCardBrandWithCardNumber
+CPCCardBrandShortStringWithBrand
+CPCFelicaCardBrandStringWithBrand
+CPCCardBrandStringWithBrand
+CPCCardBrandIdentifierWithBrand
+CPCCardBrandWithBrandIdentifier
++[CPCPaymentCard paymentCardWithGiftCardPAN:]
++[CPCPaymentCard paymentCardWithAlphanumericGiftCardPAN:]
+-[CPCPaymentCard initWithReaderType:entryMethod:]
+-[CPCPaymentCard initWithCardNumber:]
+-[CPCPaymentCard initWithBrand:cardNumberLastFour:]
+-[CPCPaymentCard initWithBrand:cardNumberLastFour:readerType:entryMethod:]
+-[CPCPaymentCard init]
+-[CPCPaymentCard dealloc]
++[CPCPaymentCard expirationDateFormatter]
+___41+[CPCPaymentCard expirationDateFormatter]_block_invoke
++[CPCPaymentCard expirationMonthFormatter]
+___42+[CPCPaymentCard expirationMonthFormatter]_block_invoke
++[CPCPaymentCard expirationYearFormatter]
+___41+[CPCPaymentCard expirationYearFormatter]_block_invoke
+-[CPCPaymentCard name]
+-[CPCPaymentCard setNumber:]
+-[CPCPaymentCard number]
+-[CPCPaymentCard minimumValidNumberLength]
+-[CPCPaymentCard validVerificationValueLength]
+-[CPCPaymentCard formattedNumber]
+-[CPCPaymentCard formattedMaskedNumber]
+-[CPCPaymentCard maskedNumber]
+-[CPCPaymentCard expirationMonth]
+-[CPCPaymentCard expirationYear]
+-[CPCPaymentCard localizedBrandAndNumberDisplayStringWithStyle:]
+-[CPCPaymentCard localizedBrandDisplayStringWithStyle:]
+-[CPCPaymentCard authorizeDictionary]
+-[CPCPaymentCard searchDictionary]
+-[CPCPaymentCard refundDictionary]
+-[CPCPaymentCard isAuthorizable]
+-[CPCPaymentCard isCapturable]
+-[CPCPaymentCard isCardPresenceRequiredToCompleteTransaction]
+-[CPCPaymentCard isValid]
+-[CPCPaymentCard wasKeyed]
+-[CPCPaymentCard wasSwiped]
+-[CPCPaymentCard wasInserted]
+-[CPCPaymentCard wasInProximity]
+-[CPCPaymentCard isEqualBrandAndNumberLastFour:]
+-[CPCPaymentCard isEqualBrandAndNumberLastFour:options:]
+___56-[CPCPaymentCard isEqualBrandAndNumberLastFour:options:]_block_invoke
+-[CPCPaymentCard clearCardData]
+-[CPCPaymentCard canUseNameForCustomerIdentification]
+-[CPCPaymentCard localizedBrandAndLastFour]
+-[CPCPaymentCard configureAsGiftcard]
+-[CPCPaymentCard applyGiftcardExpiration]
+-[CPCPaymentCard description]
+-[CPCPaymentCard _hasValidVerificationValue]
+-[CPCPaymentCard setNameComponentsFromName:]
+-[CPCPaymentCard populateWithCorePaymentCard:]
+-[CPCPaymentCard numberLastFour]
+-[CPCPaymentCard setNumberLastFour:]
+-[CPCPaymentCard brand]
+-[CPCPaymentCard setBrand:]
+-[CPCPaymentCard firstName]
+-[CPCPaymentCard setFirstName:]
+-[CPCPaymentCard lastName]
+-[CPCPaymentCard setLastName:]
+-[CPCPaymentCard title]
+-[CPCPaymentCard setTitle:]
+-[CPCPaymentCard expiration]
+-[CPCPaymentCard setExpiration:]
+-[CPCPaymentCard verificationValue]
+-[CPCPaymentCard setVerificationValue:]
+-[CPCPaymentCard postalCode]
+-[CPCPaymentCard setPostalCode:]
+-[CPCPaymentCard readerType]
+-[CPCPaymentCard setReaderType:]
+-[CPCPaymentCard entryMethod]
+-[CPCPaymentCard setEntryMethod:]
+-[CPCPaymentCard cardholderVerificationMethod]
+-[CPCPaymentCard setCardholderVerificationMethod:]
+-[CPCPaymentCard authorizationRequestData]
+-[CPCPaymentCard setAuthorizationRequestData:]
+-[CPCPaymentCard authorizationRequestKeyData]
+-[CPCPaymentCard setAuthorizationRequestKeyData:]
+-[CPCPaymentCard authorizationResponseData]
+-[CPCPaymentCard setAuthorizationResponseData:]
+-[CPCPaymentCard captureRequestData]
+-[CPCPaymentCard setCaptureRequestData:]
+-[CPCPaymentCard continuedCardPresenceRequiredAfterAuthRequestUntilCaptureRequest]
+-[CPCPaymentCard setContinuedCardPresenceRequiredAfterAuthRequestUntilCaptureRequest:]
+-[CPCPaymentCard isEMVOfflineApproved]
+-[CPCPaymentCard setEMVOfflineApproved:]
+-[CPCPaymentCard applications]
+-[CPCPaymentCard setApplications:]
+-[CPCPaymentCard accounts]
+-[CPCPaymentCard setAccounts:]
+-[CPCPaymentCard secureNumber]
+-[CPCPaymentCard setSecureNumber:]
+-[CPCPaymentCard allowsAlphanumericCardNumber]
+-[CPCPaymentCard setAllowsAlphanumericCardNumber:]
+-[CPCPaymentCard .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.15
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_CLASSLIST_REFERENCES_$_.36
+_OBJC_SELECTOR_REFERENCES_.38
+_OBJC_SELECTOR_REFERENCES_.40
+_OBJC_SELECTOR_REFERENCES_.46
+_OBJC_CLASSLIST_REFERENCES_$_.47
+_OBJC_SELECTOR_REFERENCES_.49
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_CLASSLIST_REFERENCES_$_.52
+_OBJC_SELECTOR_REFERENCES_.54
+_OBJC_SELECTOR_REFERENCES_.56
+_OBJC_SELECTOR_REFERENCES_.58
+_OBJC_SELECTOR_REFERENCES_.62
+_OBJC_SELECTOR_REFERENCES_.64
+_OBJC_CLASSLIST_REFERENCES_$_.65
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_SELECTOR_REFERENCES_.69
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_SELECTOR_REFERENCES_.73
+_OBJC_SELECTOR_REFERENCES_.75
+_expirationDateFormatter.expirationDateFormatter
+_expirationDateFormatter.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.77
+_OBJC_SELECTOR_REFERENCES_.81
+_expirationMonthFormatter.expirationDateFormatter
+_expirationMonthFormatter.onceToken
+___block_literal_global.82
+_expirationYearFormatter.expirationDateFormatter
+_expirationYearFormatter.onceToken
+___block_literal_global.85
+_OBJC_SELECTOR_REFERENCES_.89
+_OBJC_CLASSLIST_REFERENCES_$_.90
+_OBJC_SELECTOR_REFERENCES_.92
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_SELECTOR_REFERENCES_.96
+_OBJC_SELECTOR_REFERENCES_.98
+_OBJC_SELECTOR_REFERENCES_.104
+_OBJC_SELECTOR_REFERENCES_.106
+_OBJC_SELECTOR_REFERENCES_.108
+_OBJC_SELECTOR_REFERENCES_.110
+_OBJC_SELECTOR_REFERENCES_.112
+_OBJC_SELECTOR_REFERENCES_.120
+_OBJC_SELECTOR_REFERENCES_.124
+_OBJC_SELECTOR_REFERENCES_.126
+_OBJC_SELECTOR_REFERENCES_.132
+_OBJC_CLASSLIST_REFERENCES_$_.133
+_OBJC_SELECTOR_REFERENCES_.135
+_OBJC_SELECTOR_REFERENCES_.141
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_CLASSLIST_REFERENCES_$_.145
+_OBJC_CLASSLIST_REFERENCES_$_.160
+_OBJC_SELECTOR_REFERENCES_.162
+_OBJC_SELECTOR_REFERENCES_.164
+_OBJC_SELECTOR_REFERENCES_.172
+_OBJC_SELECTOR_REFERENCES_.176
+_OBJC_SELECTOR_REFERENCES_.180
+_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_SELECTOR_REFERENCES_.184
+_isEqualBrandAndNumberLastFour:options:.softMatches
+_isEqualBrandAndNumberLastFour:options:.onceToken
+___block_literal_global.185
+_OBJC_CLASSLIST_REFERENCES_$_.186
+_OBJC_SELECTOR_REFERENCES_.188
+_OBJC_SELECTOR_REFERENCES_.190
+_OBJC_SELECTOR_REFERENCES_.192
+_OBJC_SELECTOR_REFERENCES_.194
+_OBJC_SELECTOR_REFERENCES_.196
+_OBJC_SELECTOR_REFERENCES_.198
+_OBJC_SELECTOR_REFERENCES_.200
+_OBJC_SELECTOR_REFERENCES_.202
+_OBJC_SELECTOR_REFERENCES_.204
+_OBJC_SELECTOR_REFERENCES_.206
+_OBJC_SELECTOR_REFERENCES_.208
+_OBJC_SELECTOR_REFERENCES_.216
+_OBJC_SELECTOR_REFERENCES_.220
+_OBJC_CLASSLIST_REFERENCES_$_.221
+_OBJC_SELECTOR_REFERENCES_.223
+_OBJC_SELECTOR_REFERENCES_.225
+_OBJC_SELECTOR_REFERENCES_.227
+_OBJC_SELECTOR_REFERENCES_.229
+_OBJC_SELECTOR_REFERENCES_.231
+_OBJC_SELECTOR_REFERENCES_.233
+_OBJC_SELECTOR_REFERENCES_.235
+_OBJC_SELECTOR_REFERENCES_.237
+_OBJC_SELECTOR_REFERENCES_.239
+_OBJC_SELECTOR_REFERENCES_.241
+_OBJC_SELECTOR_REFERENCES_.243
+_OBJC_SELECTOR_REFERENCES_.245
+_OBJC_SELECTOR_REFERENCES_.247
+_OBJC_SELECTOR_REFERENCES_.249
+_OBJC_SELECTOR_REFERENCES_.251
+_OBJC_SELECTOR_REFERENCES_.253
+_OBJC_SELECTOR_REFERENCES_.255
+_OBJC_SELECTOR_REFERENCES_.257
+_OBJC_SELECTOR_REFERENCES_.259
+_OBJC_SELECTOR_REFERENCES_.261
+_OBJC_SELECTOR_REFERENCES_.263
+__OBJC_$_CLASS_METHODS_CPCPaymentCard
+__OBJC_METACLASS_RO_$_CPCPaymentCard
+__OBJC_$_INSTANCE_METHODS_CPCPaymentCard
+_OBJC_IVAR_$_CPCPaymentCard._continuedCardPresenceRequiredAfterAuthRequestUntilCaptureRequest
+_OBJC_IVAR_$_CPCPaymentCard._EMVOfflineApproved
+_OBJC_IVAR_$_CPCPaymentCard._allowsAlphanumericCardNumber
+_OBJC_IVAR_$_CPCPaymentCard._numberLastFour
+_OBJC_IVAR_$_CPCPaymentCard._brand
+_OBJC_IVAR_$_CPCPaymentCard._firstName
+_OBJC_IVAR_$_CPCPaymentCard._lastName
+_OBJC_IVAR_$_CPCPaymentCard._title
+_OBJC_IVAR_$_CPCPaymentCard._expiration
+_OBJC_IVAR_$_CPCPaymentCard._verificationValue
+_OBJC_IVAR_$_CPCPaymentCard._postalCode
+_OBJC_IVAR_$_CPCPaymentCard._readerType
+_OBJC_IVAR_$_CPCPaymentCard._entryMethod
+_OBJC_IVAR_$_CPCPaymentCard._cardholderVerificationMethod
+_OBJC_IVAR_$_CPCPaymentCard._authorizationRequestData
+_OBJC_IVAR_$_CPCPaymentCard._authorizationRequestKeyData
+_OBJC_IVAR_$_CPCPaymentCard._authorizationResponseData
+_OBJC_IVAR_$_CPCPaymentCard._captureRequestData
+_OBJC_IVAR_$_CPCPaymentCard._applications
+_OBJC_IVAR_$_CPCPaymentCard._accounts
+_OBJC_IVAR_$_CPCPaymentCard._secureNumber
+__OBJC_$_INSTANCE_VARIABLES_CPCPaymentCard
+__OBJC_$_PROP_LIST_CPCPaymentCard
+__OBJC_CLASS_RO_$_CPCPaymentCard
+/Users/build/.jenkins/workspace/CI+ios+DLQ8PR+CI/ios-builder/s/i/Sources/CPCPaymentCard.m
+s/i/Sources/CPCPaymentCard.m
+s/i/Sources/CPCPaymentCard_Protected.h
+s/i/Sources/CPCPaymentCard.h
+__56-[CPCPaymentCard isEqualBrandAndNumberLastFour:options:]_block_invoke
+__55-[CPCPaymentCard localizedBrandDisplayStringWithStyle:]_block_invoke
+__41+[CPCPaymentCard expirationYearFormatter]_block_invoke
+__42+[CPCPaymentCard expirationMonthFormatter]_block_invoke
+__41+[CPCPaymentCard expirationDateFormatter]_block_invoke
+NSStringFromCPCPaymentCardVerificationMethod
+NSStringFromCPCPaymentCardEntryMethod
+CPCPaymentCardReaderTypeSupportsChipOrContactless
++[CPCString stringWithString:]
+-[CPCString initWithCharactersNoCopy:length:freeWhenDone:]
+-[CPCString initWithCharacters:length:]
+-[CPCString initWithBytes:length:encoding:]
+-[CPCString initWithString:]
+-[CPCString dealloc]
+-[CPCString characterAtIndex:]
+-[CPCString getCharacters:range:]
+-[CPCString length]
+-[CPCString hash]
+-[CPCString copy]
+-[CPCString description]
+-[CPCString eraseContents]
+-[CPCString hasErasedContents]
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_IVAR_$_CPCString._CString
+_OBJC_IVAR_$_CPCString._CStringLength
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_IVAR_$_CPCString._hash
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_SELECTOR_REFERENCES_.20
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_SELECTOR_REFERENCES_.24
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_CLASSLIST_REFERENCES_$_.27
+_OBJC_SELECTOR_REFERENCES_.31
+_OBJC_SELECTOR_REFERENCES_.33
+_OBJC_IVAR_$_CPCString._hasErasedContents
+__OBJC_$_CLASS_METHODS_CPCString
+__OBJC_METACLASS_RO_$_CPCString
+__OBJC_$_INSTANCE_METHODS_CPCString
+__OBJC_$_INSTANCE_VARIABLES_CPCString
+__OBJC_$_PROP_LIST_CPCString
+__OBJC_CLASS_RO_$_CPCString
+/Users/build/.jenkins/workspace/CI+ios+DLQ8PR+CI/ios-builder/s/i/Sources/CPCString.m
+s/i/Sources/CPCString.h
+s/i/Sources/CPCString.m
++[NSBundle(CPCAdditions) corePaymentCardResourcesBundle]
+___56+[NSBundle(CPCAdditions) corePaymentCardResourcesBundle]_block_invoke
+___copy_helper_block_e8_
+___destroy_helper_block_e8_
+__OBJC_METACLASS_RO_$_CorePaymentCardBundleFinderClass
+__OBJC_CLASS_RO_$_CorePaymentCardBundleFinderClass
+_corePaymentCardResourcesBundle.resourcesBundle
+_corePaymentCardResourcesBundle.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.1
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_SELECTOR_REFERENCES_.7
+_OBJC_CLASSLIST_REFERENCES_$_.8
+_OBJC_SELECTOR_REFERENCES_.10
+___block_descriptor_48_e8__e5_v8?0l
+__OBJC_$_CATEGORY_CLASS_METHODS_NSBundle_$_CPCAdditions
+__OBJC_$_CATEGORY_NSBundle_$_CPCAdditions
+/Users/build/.jenkins/workspace/CI+ios+DLQ8PR+CI/ios-builder/s/i/Sources/Categories/NSBundle+CPCAdditions.m
+__destroy_helper_block_e8_
+__copy_helper_block_e8_
+__56+[NSBundle(CPCAdditions) corePaymentCardResourcesBundle]_block_invoke
+s/i/Sources/Categories/NSBundle+CPCAdditions.m
++[NSString(CPCAdditions) _CPC_stringWithCString:length:encoding:]
+-[NSString(CPCAdditions) CPC_stringByRemovingNonNumericCharacters]
+_OBJC_SELECTOR_REFERENCES_.5
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSString_$_CPCAdditions
+__OBJC_$_CATEGORY_CLASS_METHODS_NSString_$_CPCAdditions
+__OBJC_$_CATEGORY_NSString_$_CPCAdditions
+/Users/build/.jenkins/workspace/CI+ios+DLQ8PR+CI/ios-builder/s/i/Sources/Categories/NSString+CPCAdditions.m
+s/i/Sources/Categories/NSString+CPCAdditions.m

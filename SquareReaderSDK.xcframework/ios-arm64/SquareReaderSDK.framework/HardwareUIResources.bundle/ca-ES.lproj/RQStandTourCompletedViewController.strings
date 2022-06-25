@@ -1,0 +1,24 @@
+/* Class = "UIButton"; normalTitle = "Continue to Point of Sale"; ObjectID = "28"; */
+"28.normalTitle" = "Continua al TPV";
+
+/* Class = "UIButton"; normalTitle = "See compatible Hardware"; ObjectID = "29"; */
+"29.normalTitle" = "Mostra un equip compatible";
+
+/* Class = "UILabel"; text = "Connect your\nhardware at any time."; ObjectID = "30"; */
+"30.text" = "Connecta els teus\ncomponents quan vulguis.";
+
+/* Class = "UILabel"; text = "Go to Settings to view your hardware connection status, test connected devices, and manage receipt and ticket printers."; ObjectID = "32"; */
+"32.text" = "Ves a Configuració per comprovar l’estat de la connexió dels components, provar els dispositius connectats i gestionar les impressores de rebuts i comandes.";
+
+/* Class = "UIButton"; normalTitle = "Continue to Point of Sale"; ObjectID = "36"; */
+"36.normalTitle" = "Continua al TPV";
+
+/* Class = "UIButton"; normalTitle = "Go to Hardware Settings"; ObjectID = "37"; */
+"37.normalTitle" = "Ves a la configuració dels components";
+
+/* Class = "UILabel"; text = "Manage your hardware at any time."; ObjectID = "38"; */
+"38.text" = "Gestiona els teus components en qualsevol moment.";
+
+/* Class = "UILabel"; text = "Go to Settings to view your hardware connection status, test connected devices, and manage receipt and ticket printers."; ObjectID = "40"; */
+"40.text" = "Ves a Configuració per comprovar l’estat de la connexió dels components, provar els dispositius connectats i gestionar les impressores de rebuts i comandes.";
+
